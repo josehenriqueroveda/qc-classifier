@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "qc-classifier"
+version = "0.1.0"
+description = "ML model to classify whether a quality complaint is valid or not."
+authors = ["josehenriqueroveda"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "qc_classifier"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+ipykernel = "^6.29.3"
+pandas = "^2.2.1"
+category-encoders = "^2.6.3"
+scikit-learn = "^1.4.1.post1"
+cryptography = "^42.0.5"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
