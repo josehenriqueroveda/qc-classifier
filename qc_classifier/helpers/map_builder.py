@@ -1,25 +1,22 @@
 import pandas as pd
 
-from helpers.constants import COLUMNS, DF_PATH
-
 
 class MapBuilder:
-    def __init__(self):
-        self.df = pd.read_csv(DF_PATH, sep=";", usecols=COLUMNS)
+    def __init__(self, df):
+        self.df = df
 
     def hybrid_map(self):
         return {
             hybrid: index for index, hybrid in enumerate(self.df["hybrid"].unique())
         }
 
-    def batch_map(self):
-        return {batch: index for index, batch in enumerate(self.df["batch"].unique())}
+    def storage_map(self):
+        return {
+            storage: index for index, storage in enumerate(self.df["storage"].unique())
+        }
 
-    def brand_map(self):
-        return {brand: index for index, brand in enumerate(self.df["brand"].unique())}
-
-    def sieve_map(self):
-        return {sieve: index for index, sieve in enumerate(self.df["sive"].unique())}
+    def plant_map(self):
+        return {plant: index for index, plant in enumerate(self.df["plant"].unique())}
 
     def treatment_map(self):
         return {
@@ -27,15 +24,14 @@ class MapBuilder:
             for index, treatment in enumerate(self.df["treatment"].unique())
         }
 
-    def city_map(self):
-        return {city: index for index, city in enumerate(self.df["city"].unique())}
+    def location_map(self):
+        return {
+            location: index
+            for index, location in enumerate(self.df["location"].unique())
+        }
 
-
-map_builder = MapBuilder()
-
-HYBRID_MAP = map_builder.hybrid_map()
-BATCH_MAP = map_builder.batch_map()
-BRAND_MAP = map_builder.brand_map()
-SIEVE_MAP = map_builder.sieve_map()
-TREATMENT_MAP = map_builder.treatment_map()
-CITY_MAP = map_builder.city_map()
+    def group_map(self):
+        return {
+            group: index
+            for index, group in enumerate(self.df["problem_group"].unique())
+        }
