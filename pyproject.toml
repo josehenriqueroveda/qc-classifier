@@ -18,6 +18,7 @@ matplotlib = "^3.8.3"
 plotly = "^5.20.0"
 dython = "^0.7.5"
 statsmodels = "^0.14.1"
+lightgbm = "^4.3.0"
 
 
 [build-system]
