@@ -164,3 +164,4 @@ poetry.lock
 db
 constants.py
 prepare_data.ipynb
+models
