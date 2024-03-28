@@ -4,7 +4,7 @@ ML model to classify whether a quality complaint is valid or not. The model is t
 
 ## Dataset
 
-The **fictional** dataset consists of quality complaints and their corresponding results. The results are binary, where `1` indicates a **valid** complaint and `0` indicates an **invalid** complaint.
+The **fictional** dataset consists of quality complaints and their corresponding results. The results are binary, where `True` indicates a **valid** complaint and `False` indicates an **invalid** complaint.
 The data columns are as follows:
 - `plant`: The plant where the product was made
 - `storage`: The storage location of the product
@@ -15,7 +15,7 @@ The data columns are as follows:
 - `hybrid`: The hybrid (commercial name) of the product
 - `treatment`: The treatment of the product
 - `reason`: The reason for the complaint
-- `result`: The result of the complaint (1 for valid, 0 for invalid)
+- `result`: The result of the complaint (*True* for valid, *False* for invalid)
 
 ## Histograms
 
