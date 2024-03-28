@@ -57,8 +57,8 @@ The dataset is split into training and testing sets, with 80% of the data used f
 - Random Forest
 
 The models are evaluated using the following metrics:
-- Accuracy
-- Roc-Auc
+- **Accuracy**: The proportion of correct predictions to the total number of predictions.
+- **Roc-Auc**: The area under the receiver operating characteristic curve, which measures the trade-off between true positive rate and false positive rate.
 
 
 ### LightGBM
@@ -69,6 +69,14 @@ LightGBM is a gradient boosting framework that uses tree-based learning algorith
 
 ![fig6](qc_classifier/imgs/fig6.png)
 
+### Random Forest
+
+Random Forest is an ensemble learning method that constructs a multitude of decision trees during training and outputs the mode of the classes as the prediction.
+
+![fig7](qc_classifier/imgs/fig7.png)
+
+![fig8](qc_classifier/imgs/fig8.png)
+
 
 ## Results
 
@@ -76,6 +84,9 @@ The results are as follows:
 
 | Model        | Accuracy | Roc-Auc |
 |--------------|----------|---------|
-| LightGBM     | 0.766     | 0.817    |
-| Random Forest| TO-DO     | TO-DO    |
+| LightGBM     | <span style="color:red">0.759</span>     | <span style="color:red">0.817</span>    |
+| Random Forest| <span style="color:green">0.785</span>     | <span style="color:green">0.836</span>    |
 
+The Random Forest model outperforms the LightGBM model in terms of accuracy and Roc-Auc score.
+
+![fig9](qc_classifier/imgs/fig9.png)

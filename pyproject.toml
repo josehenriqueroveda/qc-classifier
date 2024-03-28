@@ -19,6 +19,7 @@ plotly = "^5.20.0"
 dython = "^0.7.5"
 statsmodels = "^0.14.1"
 lightgbm = "^4.3.0"
+torch = "^2.2.2"
 
 
 [build-system]
